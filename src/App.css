@@ -1,5 +1,9 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Source+Serif+Pro&display=swap');.App {
   text-align: center;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+
 }
 
 .App-logo {
@@ -23,16 +27,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+  font-family: "Oleo Script Swash Caps";
+  font-size: 60px;
 }
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.flex p{
+  font-size: 60px;
+  font-family: "Source Serif Pro";
+}
+button{
+width: 20% ;
+border: none;
+background-color: #e7bd05;
+color: rgb(255, 255, 255);
+font-size: 20px;
+font-weight: bolder;
+padding: 10px;
+border-radius: 10px;
 }

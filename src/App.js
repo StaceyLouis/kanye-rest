@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import kanye from './assets/images/kanye.png'
+import kanye from './assets/images/kanye-west.png'
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -19,9 +19,12 @@ function App() {
   return (
     <div className="App">
       <h1>Random Kanye Quote</h1>
+      <div className='flex'>
     <p>" {quote} "</p>
+    
       <button onClick={()=> setReFresh(!refresh)}>New Quote</button>
-  
+      </div>
+
     </div>
   );
 }

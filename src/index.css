@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('./assets/images/kanye.png');
-  background-color: #040B11;
-  color:white;
+  background: url('./assets/images/kanye-west.png');
+  background-color: #141413;
+  color:rgb(2, 110, 153);
 }
 
 code {
