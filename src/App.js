@@ -1,23 +1,27 @@
 import logo from './logo.svg';
+import kanye from './assets/images/kanye.png'
 import './App.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+  const[quote, setQuote]= useState([])
+  const [refresh, setReFresh]= useState(false)
+  const getQuote = useEffect(()=>{
+    axios.get('https://api.kanye.rest/')
+    .then(res=>{
+      console.log(res.data)
+      setQuote(res.data.quote)
+    
+    })
+    .catch(err=>console.log(err))
+  },[refresh])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Random Kanye Quote</h1>
+    <p>" {quote} "</p>
+      <button onClick={()=> setReFresh(!refresh)}>New Quote</button>
+  
     </div>
   );
 }
